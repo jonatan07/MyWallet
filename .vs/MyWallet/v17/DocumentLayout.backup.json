@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E579A370-A63A-4DDA-A165-763A0781C6C4}|..\\MyWallet.Test\\MyWallet.Test.csproj|c:\\users\\j-dv0\\onedrive\\escritorio\\prueba payphone\\mywallet.test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1F769D3-7551-442F-BF0A-701224A486F5}|..\\MyWallet.Application\\MyWallet.Application.csproj|c:\\users\\j-dv0\\onedrive\\escritorio\\prueba payphone\\mywallet.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1F769D3-7551-442F-BF0A-701224A486F5}|..\\MyWallet.Application\\MyWallet.Application.csproj|c:\\users\\j-dv0\\onedrive\\escritorio\\prueba payphone\\mywallet.application\\mywallet.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet.Test\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\MyWallet.Test\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet.Test\\UnitTest1.cs",
+              "RelativeToolTip": "..\\MyWallet.Test\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T16:43:26.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyWallet.Application",
+              "DocumentMoniker": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet.Application\\MyWallet.Application.csproj",
+              "RelativeDocumentMoniker": "..\\MyWallet.Application\\MyWallet.Application.csproj",
+              "ToolTip": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet.Application\\MyWallet.Application.csproj",
+              "RelativeToolTip": "..\\MyWallet.Application\\MyWallet.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-11T16:39:03.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\MyWallet.Application\\Class1.cs",
+              "ToolTip": "C:\\Users\\j-dv0\\OneDrive\\Escritorio\\Prueba PayPhone\\MyWallet.Application\\Class1.cs",
+              "RelativeToolTip": "..\\MyWallet.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T16:38:29.264Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
