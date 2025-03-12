@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using MyWallet.Application.Commands.Wallets.Create;
-using MyWallet.Domain.Responses;
+using MyWallet.Application.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;

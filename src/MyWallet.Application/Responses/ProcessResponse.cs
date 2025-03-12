@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyWallet.Domain.Responses
+namespace MyWallet.Application.Responses
 {
     public class ProcessResponse
     {

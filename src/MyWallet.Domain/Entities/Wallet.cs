@@ -1,6 +1,6 @@
 ﻿namespace MyWallet.Domain.Entities
 {
-    public class Wallet : BaseEntity
+    public class Wallet : BaseEntityUpdatable
     {
         public Wallet(int id, string documentId, string documentType, string name) : base(id)
         {

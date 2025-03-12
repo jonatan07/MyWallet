@@ -8,8 +8,21 @@ namespace MyWallet.Domain.Entities
 {
     public class Operations : BaseEntity
     {
+        public Operations(int id,string type, decimal amount, int walletId): base(id)
+        {
+            Type = type;
+            Amount = amount;
+            WalletId = walletId;
+        }
+        public Operations(string type, decimal amount, int walletId)
+        {
+            Type = type;
+            Amount = amount;
+            WalletId = walletId;
+        }
+
         public string Type { get; set; }
         public decimal Amount { get; set; }
-        public string WalletId { get; private set; }
+        public int WalletId { get; set; }
     }
 }

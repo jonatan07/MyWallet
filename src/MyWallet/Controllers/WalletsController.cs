@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MyWallet.Application.Commands.Operations.Create;
 using MyWallet.Application.Commands.Wallets.Create;
 using MyWallet.Application.Commands.Wallets.Delete;
 using MyWallet.Application.Commands.Wallets.Update;
@@ -72,5 +73,15 @@ public class WalletsController : ControllerBase
         var command = new DeleteWalletCommand() { Id = id };
         var response = await _mediator.Send(command);
         return Accepted(response);
+    }
+
+    /// <summary>
+    /// Crea una transaccion o operacion hacia una Wallet
+    /// </summary>
+    [HttpPost("Operaction")]
+    public async Task<IActionResult> CreateOperaction(CreateOperationCommand command)
+    {
+        var response = await _mediator.Send(command);
+        return CreatedAtAction(nameof(GetById), new { id = response.Data.Id }, response.Data);
     }
 }

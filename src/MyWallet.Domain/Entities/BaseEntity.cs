@@ -11,27 +11,19 @@ namespace MyWallet.Domain.Entities
         protected BaseEntity()
         {
             CreatedAt = DateTime.UtcNow;
-            UpdatedAt = DateTime.UtcNow;
+           
         }
         protected BaseEntity(int id)
         {
             Id = id;
             CreatedAt = DateTime.UtcNow;
-            UpdatedAt = DateTime.UtcNow;
         }
-        protected BaseEntity(int id, DateTime createdAt, DateTime updatedAt)
+        protected BaseEntity(int id, DateTime createdAt)
         {
             Id = id;
             CreatedAt = createdAt;
-            UpdatedAt = updatedAt;
         }
-        public void SetUpdatedAt()
-        {
-            UpdatedAt = DateTime.UtcNow;
-        }
-
         public int Id { get; set; }
         public DateTime CreatedAt { get; init; }
-        public DateTime UpdatedAt { get; set; }
     }
 }

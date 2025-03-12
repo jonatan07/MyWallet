@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyWallet.Domain.Entities;
-using MyWallet.Domain.Responses;
+using MyWallet.Application.Responses;
 
 namespace MyWallet.Application.Commands.Wallets.Create
 {

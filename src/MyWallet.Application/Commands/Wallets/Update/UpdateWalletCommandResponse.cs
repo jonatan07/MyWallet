@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using MyWallet.Domain.Responses;
+using MyWallet.Application.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
