@@ -6,8 +6,8 @@ Ademas permila generacion de operaciones (Debito / Credito) y ver el historial d
 
 ## Tecnologias
 La tecnologia que usan en el API son las siguientes:
-- ASP.NET
-- C#
+- ASP.NET 8
+- C# 8
 - Entity Framework
 - Serilog
 - MediatR
