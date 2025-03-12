@@ -80,7 +80,7 @@ public class WalletsController : ControllerBase
     public async Task<IActionResult> CreateOperaction(CreateOperationCommand command)
     {
         var response = await _mediator.Send(command);
-        return CreatedAtAction(nameof(GetById), new { id = response.Data.Id }, response.Data);
+        return Ok(response);
     }
     /// <summary>
     /// Retorna todas las operaciones creadas.
