@@ -28,7 +28,6 @@ namespace MyWallet.Application.Queries.Wallets.GetAll
         public async Task<Response<GetAllWalletsQueryResponse>> Handle(GetAllWalletsQuery request, CancellationToken cancellationToken)
         {
             var result = await _walletRepository.GetAll();
-            await _walletRepository.SaveChangesAsync(cancellationToken);
 
             return ProcessResponse<GetAllWalletsQueryResponse>.Success(
                new GetAllWalletsQueryResponse(result.ToList()));

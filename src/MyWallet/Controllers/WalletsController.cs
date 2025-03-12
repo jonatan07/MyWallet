@@ -4,11 +4,9 @@ using MyWallet.Application.Commands.Operations.Create;
 using MyWallet.Application.Commands.Wallets.Create;
 using MyWallet.Application.Commands.Wallets.Delete;
 using MyWallet.Application.Commands.Wallets.Update;
+using MyWallet.Application.Queries.Operations.GetAll;
 using MyWallet.Application.Queries.Wallets.GetAll;
 using MyWallet.Application.Queries.Wallets.GetBy;
-using MyWallet.Domain.Entities;
-using System.Reflection.Metadata;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MyWallet.Controllers;
 
@@ -83,5 +81,14 @@ public class WalletsController : ControllerBase
     {
         var response = await _mediator.Send(command);
         return CreatedAtAction(nameof(GetById), new { id = response.Data.Id }, response.Data);
+    }
+    /// <summary>
+    /// Retorna todas las operaciones creadas.
+    /// </summary>
+    [HttpGet("Operaction/history")]
+    public async Task<IActionResult> GetAllOperation()
+    {
+        var response = await _mediator.Send(new GetAllOperationsQuery());
+        return Ok(response);
     }
 }

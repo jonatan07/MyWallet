@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MyWallet.Application.Queries.Wallets.GetAll
 {
-    public class GetAllWalletsQuery: IRequest<Response<GetAllWalletsQueryResponse>>
+    public class GetAllWalletsQuery:IRequest<Response<GetAllWalletsQueryResponse>>
     {
     }
 }
