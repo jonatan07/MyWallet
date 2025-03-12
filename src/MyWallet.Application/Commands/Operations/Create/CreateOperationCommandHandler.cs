@@ -19,6 +19,8 @@ namespace MyWallet.Application.Commands.Operations.Create
         private readonly IOperationRepository _OperationRepository;
         private readonly IWalletRepository _walletRepository;
         private readonly ILogger<CreateOperationCommandHandler> _logger;
+        private const string CREDITO = "credito";
+        private const string DEBITO = "debito";
         public CreateOperationCommandHandler(IMediator mediator, ILogger<CreateOperationCommandHandler> logger,
                                           IOperationRepository operationRepository, IWalletRepository walletRepository)
         {
@@ -29,18 +31,20 @@ namespace MyWallet.Application.Commands.Operations.Create
         }
         public async Task<Response<CreateOperationCommandResponse>> Handle(CreateOperationCommand request, CancellationToken cancellationToken)
         {
+            
             var wallet = await _walletRepository.GetByIdAsync(request.WalletId);
             if (wallet == null)
             {
                 return ProcessResponse<CreateOperationCommandResponse>.Error(new ErrorResponse("E005", "Wallet not found"));
             }
+            
             var result = await _OperationRepository.Add(new Domain.Entities.Operations(request.Type, request.Amount, request.WalletId));
             
-            if (result.Type.ToLower() == "credito")
+            if (result.Type.ToLower() == CREDITO)
             {
                 wallet.Balance += result.Amount;
             }
-            else if (result.Type.ToLower() == "debito")
+            else if (result.Type.ToLower() == DEBITO)
             {
                 if (wallet.Balance < result.Amount)
                 {

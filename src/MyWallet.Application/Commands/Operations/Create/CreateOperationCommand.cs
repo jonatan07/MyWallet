@@ -18,10 +18,11 @@ namespace MyWallet.Application.Commands.Operations.Create
             Amount = amount;
             Type = type;
         }
+
         [Required]
         public int WalletId { get; set; }
         [Required]
-        [Range(0, 900000000000)]
+        [Range(1, 900000000000)]
         public decimal Amount { get; set; }
         [Required]
         [RegularExpression("debito|credito", ErrorMessage = "La operacion debe ser 'debito' o 'credito'.")]
