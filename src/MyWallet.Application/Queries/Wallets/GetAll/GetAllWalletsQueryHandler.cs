@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace MyWallet.Application.Queries.Wallets.GetAll
 {
-    public class GetAllWalletsQueryHandler : IRequestHandler<GetAllWalletsQuery, Response<List<Wallet>>>
+    public class GetAllWalletsQueryHandler : IRequestHandler<GetAllWalletsQuery, Response<GetAllWalletsQueryResponse>>
     {
         private readonly IMediator _mediator;
         private readonly IWalletRepository _walletRepository;
@@ -25,13 +25,13 @@ namespace MyWallet.Application.Queries.Wallets.GetAll
             _walletRepository = walletRepository;
             _logger = logger;
         }
-        public async Task<Response<List<Wallet>>> Handle(GetAllWalletsQuery request, CancellationToken cancellationToken)
+        public async Task<Response<GetAllWalletsQueryResponse>> Handle(GetAllWalletsQuery request, CancellationToken cancellationToken)
         {
             var result = await _walletRepository.GetAll();
             await _walletRepository.SaveChangesAsync(cancellationToken);
 
-            return ProcessResponse<List<Wallet>>.Success(
-               new List<Wallet>(result.ToList()));
+            return ProcessResponse<GetAllWalletsQueryResponse>.Success(
+               new GetAllWalletsQueryResponse(result.ToList()));
         }
     }
 }
