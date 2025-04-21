@@ -9,8 +9,8 @@ namespace MyWallet.Domain.Interfaces
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-        Task<IQueryable<T>> GetAll();
-        Task<T> GetByIdAsync(int id);
+        IQueryable<T> GetAll();
+        Task<T?> GetByIdAsync(int id);
         Task<T> Add(T entity);
         void Remove(T entity);
         Task<T> Update(T entity);

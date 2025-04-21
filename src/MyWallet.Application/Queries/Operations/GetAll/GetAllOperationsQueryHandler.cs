@@ -27,7 +27,7 @@ namespace MyWallet.Application.Queries.Operations.GetAll
 
         public async Task<Response<GetAllOperationsQueryResponse>> Handle(GetAllOperationsQuery request, CancellationToken cancellationToken)
         {
-            var result = await _operationRepository.GetAll();
+            var result =  _operationRepository.GetAll();
 
             return ProcessResponse<GetAllOperationsQueryResponse>.Success(
                new GetAllOperationsQueryResponse(result.ToList()));

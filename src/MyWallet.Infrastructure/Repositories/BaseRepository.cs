@@ -19,34 +19,28 @@ namespace MyWallet.Infrastructure.Repositories
         {
             _context = context;
         }
-       
-        public async Task<IQueryable<T>> GetAll()
+        public IQueryable<T> GetAll()
         {
             return  _context.Set<T>().AsQueryable();
         }
-
         public  async Task<T?> GetByIdAsync(int id)
         {
             return await _context.Set<T>().FindAsync(id);
         }
-
         public  Task<T> Add(T entity)
         {
             _context.Set<T>().Add(entity);
             return Task.FromResult(entity);
         }
-
         public void Remove(T entity)
         {
             _context.Set<T>().Remove(entity);
         }
-
         public Task<T> Update(T entity)
         {
             _context.Set<T>().Update(entity);
             return Task.FromResult(entity);
         }
-
         public async Task SaveChangesAsync(CancellationToken cancellationToken)
         {
             await _context.SaveChangesAsync(cancellationToken);

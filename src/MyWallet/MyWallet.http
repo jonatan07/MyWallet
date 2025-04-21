@@ -1,6 +1,6 @@
 @MyWallet_HostAddress = http://localhost:5025
 
-GET {{MyWallet_HostAddress}}/weatherforecast/
+GET {{MyWallet_HostAddress}}/Wallets/
 Accept: application/json
 
 ###
